@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Let's Plan connexion</title>
+      <title> Let's Plan ! </title>
       <link rel="stylesheet" href="connexion.css"/>
   </head>
   <body>
@@ -25,49 +25,37 @@
    	  </span>
           </form>
        <?php
-
-           $dbhost = 'localhost:3306';
-           $dbuser = 'root';
-           $dbpass = 'root';
-           $connexion = mysqli_connect($dbhost, $dbuser, $dbpass);
+            $connexion= new PDO('mysql:host=localhost;dbname=utilisateurs;charset=utf8', 'root', 'root');
 
            if (!$connexion) {
                echo "Pas de connexion au serveur " ; exit ;
            }
 
             echo "connexion réussie! <br/> " ;
-            mysqli_set_charset($connexion, "utf8");
             if (isset($_POST["identifiant"]) && isset($_POST["mdp"])) {
               $identifiant=$_POST["identifiant"];
-              $req= "SELECT * FROM utilisateurs.user WHERE utilisateurs.identifiant='{$identifiant}'";
-              $resultat = mysqli_query ($connexion, $req ) ;
+              $resultat= $connexion->query("SELECT * FROM utilisateurs.user WHERE utilisateurs.identifiant='{$identifiant}'") or die(print_r($connexion->errorInfo()));
               if(!$resultat){
                  echo" requête incorrecte \n ";
-                 echo mysqli_error($connexion);
                }
-
-               $count= mysqli_num_rows($resultat);
-               $pwd = mysqli_fetch_assoc($resultat);
-
-               if ($count > 0) {
-		 if( password_verify($_POST["mdp"], $pwd["mdp"]) ) {
-                     $id=$pwd['identifiant'];
-                     $pr=$pwd['prenom'];
-                     $n=$pwd['nom'];
-                     $m=$pwd['mdp'];
-		     $co=$pwd['id'];
-		     $_SESSION['identifiant']=$id;
-		     $_SESSION['id']=$co ;
-                     $_SESSION['mdp']=$m;
-	             header('Location:acceuil.php');
-		  }else {
-		      echo "Error 1";
-		         
-		    }
-		  }
-		     }
-
-	mysqli_close($connexion);
-		    ?>
+                $data = PDO::FETCH_ASSOC($resultat);
+              if($resultat->rowCount() > 0) {
+                  if( password_verify($_POST["mdp"], $data["mdp"]) ) {
+                         $id=$data['identifiant'];
+                         $pr=$data['prenom'];
+                         $n=$data['nom'];
+                         $m=$data['mdp'];
+                         $co=$data['id'];
+                        $_SESSION['identifiant']=$id;
+                        $_SESSION['id']=$co ;
+                        $_SESSION['mdp']=$m;
+                        header('Location:connexion.php');
+                  }else {
+                    echo "Error 1";
+                  }
+              }
+            }
+       $connexion->closeCursor();
+            ?>
   </body>
 </html>
