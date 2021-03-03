@@ -1,0 +1,121 @@
+.champ {
+    display: block;
+    margin: 15px 0;
+}
+
+.champ label {}
+
+.champ input {
+    border: 0px;
+    border-radius: 50px;
+    width: 260px;
+    padding: 12px;
+    font-size: 12px;
+    color: #A0A0A0;
+}
+
+.champ input:focus {
+    background-color: #fff;
+}
+
+.actions {
+    display: inline-block;
+}
+
+input:focus {
+    background-color: #ccc;
+}
+
+::placeholder {
+    color: #A1A1A1;
+}
+
+input[type="submit"] {
+    margin: 12px 0;
+    padding: 12px 30px;
+    border-radius: 50px;
+    width: 130px;
+    margin-left: 150px;
+}
+
+input[type="submit"] {
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid #fff;
+    color: #fff;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+input[type="submit"]:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #008793;
+}
+
+form {
+    margin: 50px 0 0 0;
+    text-align: center;
+}
+
+.sinon {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -220px;
+    margin-top: 160px;
+}
+
+header {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    color: white;
+    text-transform: uppercase;
+}
+
+label {}
+
+body {
+    padding: 10px;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    margin: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+}
+
+h3 {
+    color: white;
+}
+
+h3:hover {
+    color: white;
+}
+
+footer {
+    position: absolute;
+    bottom: 5px;
+    width: 100vw;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    margin: 0;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+footer p a {
+    text-decoration: none;
+    color: #a8eb12;
+}
+
+footer p a:hover {
+    color: #00bf72;
+}
