@@ -10,7 +10,7 @@
       <h1>Bienvenue sur Let's Plan</h1>
     <h3> Créer votre compte </h3>
   </header>
-   <form action="enregistrement.php" method="POST" >
+   <form action="connexion.php" method="POST" >
       <span class="champ">
            <label for="nom">Nom</label>
        <input type="text" name="nom" placeholder="taper votre nom ici " size="23"> </br>
@@ -34,11 +34,12 @@
   <?php
   //connexion au serveur:
   $connexion= new PDO('mysql:host=localhost;dbname=utilisateurs;charset=utf8', 'root', 'root');
+
   if (!$connexion) {
       echo "Pas de connexion au serveur " ;
       exit ;
   }
-  //echo "connexion réussie! " ;
+  echo "connexion réussie! " ;
   //requête:
   if(  (isset($_POST["nom"]) && (isset($_POST["prénom"])&&(isset($_POST["identifiant"])&&(isset($_POST["mdp"])))))){
       if(!empty($_POST["nom"])&&!empty($_POST["prénom"])&&!empty($_POST["identifiant"])&&!empty($_POST["mdp"])){
