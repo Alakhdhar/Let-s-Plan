@@ -5,3 +5,5 @@ CREATE TABLE planning.utilisateurs ( nom VARCHAR(32) NOT NULL ,  prenom VARCHAR(
 CREATE TABLE planning.evenements ( titre VARCHAR(255) NOT NULL ,  description VARCHAR(255) ,  id INT(20) NOT NULL AUTO_INCREMENT ,  Type VARCHAR(32) NOT NULL ,  dateDebut DATETIME NOT NULL , dateFin DATETIME NOT NULL,  lieu VARCHAR(32) NOT NULL, moyenDeTransport VARCHAR(32) NOT NULL,   PRIMARY KEY  (id)) ENGINE = InnoDB;
 
 CREATE TABLE planning.invitations ( idEvenement INT(20) NOT NULL ,  idUtilisateur INT(20) NOT NULL , PRIMARY KEY (idEvenement,idUtilisateur), FOREIGN KEY (idEvenement) REFERENCES evenements(id), FOREIGN KEY (idUtilisateur) REFERENCES utilisateurs(id)) ENGINE = InnoDB;
+
+Select e.titre,e.description,e.Type,e.dateDebut,e.dateFin,e.lieu,e.moyenDeTransport from evenements e, invitations i  where i.idUtilisateur=? AND e.id=i.idEvenement;
