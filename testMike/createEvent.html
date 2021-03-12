@@ -54,7 +54,7 @@
 			var availableTags = [
 			"Sarah El Helw",
 			"Hedi Guedidi",
-			"Amira Lahkdar"
+			"Amira Lakhdhar"
 			];
 			function split( val ) {
 				return val.split( /,\s*/ );
@@ -104,7 +104,7 @@
 
 		<!-- Header -->
 		<header id="header">
-			<h1><a href="index.html">Let's Plan</a></h1>
+			<h1><a href="login.php">Let's Plan</a></h1>
 			<nav id="nav">
 				<ul>
 					<li class="special">
@@ -113,7 +113,7 @@
 							<ul>
 								<li><a href="events.html">Evènements</a></li>
 								<li><a href="createEvent.html">Créer évènement</a></li>
-								<li><a href="index.html">Déconnexion</a></li>
+								<li><a href="login.php">Déconnexion</a></li>
 							</ul>
 						</div>
 					</li>
@@ -133,7 +133,7 @@
 					<form method="post" action="#">
 						<div class="row gtr-uniform">
 							<div class="col-6 col-12-xsmall">
-								<input type="text" name="date" id="datepicker" placeholder="Jour souhaité">
+								<input type="text" id="datepicker" placeholder="Jour souhaité">
 							</div>
 							<div class="col-6 col-12-xsmall">
 								<input type="text" name="title" id="title" value="" placeholder="Titre" />
@@ -179,15 +179,15 @@
 							</div>
 
 							<div class="col-3 col-12-small">
-								<input type="checkbox" id="aPied" name="onFoot">
+								<input type="checkbox" id="aPied" name="aPied">
 								<label for="aPied">A pied</label>
 							</div>
 							<div class="col-3 col-12-small">
-								<input type="checkbox" id="avion" name="plane">
+								<input type="checkbox" id="avion" name="avion">
 								<label for="avion">Avion</label>
 							</div>
 							<div class="col-3 col-12-small">
-								<input type="checkbox" id="bateau" name="boat">
+								<input type="checkbox" id="bateau" name="bateau">
 								<label for="bateau">Bateau</label>
 							</div>
 							<div class="col-3 col-12-small">
@@ -204,11 +204,11 @@
 								<label for="train">Train</label>
 							</div>
 							<div class="col-3 col-12-small">
-								<input type="checkbox" id="velo" name="bike">
+								<input type="checkbox" id="velo" name="velo">
 								<label for="velo">Vélo</label>
 							</div>
 							<div class="col-3 col-12-small">
-								<input type="checkbox" id="voiture" name="car">
+								<input type="checkbox" id="voiture" name="voiture">
 								<label for="voiture">Voiture</label>
 							</div>
 							<div class="col-6 col-12-small">
