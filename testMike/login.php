@@ -44,7 +44,7 @@
             <div class="inner">
                 <h2>Connexion</h2>
                 <p>
-                    <a href="https://accounts.google.com/o/oauth2/v2/auth?scope=email&access_type=online&response_type=code&redirect_uri=<?= urlencode('http://localhost/let-s-plan-main/Let-s-Plan-main/testMike/events.html') ?>&client_id=<?= GOOGLE_ID ?>">Se connecter via Google</a>
+                    <a href="https://accounts.google.com/o/oauth2/v2/auth?scope=email&access_type=online&response_type=code&redirect_uri=<?= urlencode('http://localhost/Let-s-Plan/testMike/events.html') ?>&client_id=<?= GOOGLE_ID ?>">Se connecter via Google</a>
                 </p>
                 <section>
                     <form method="post" action="events.html">
