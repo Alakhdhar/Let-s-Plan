@@ -80,7 +80,10 @@
                             <input type="email" name="email" id="email" value="" placeholder="Email" required/>
                         </div>
                         <div class="col-6 col-12-xsmall">
-                            <input type="password" name="password" id="password" value="" placeholder="Mot de passe" required/>
+                            <input type="password" name="password" id="password" value="<?php if(isset($password)){ echo $password; }?>" placeholder="Mot de passe" required/>
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            <input type="password" id="password" value="" placeholder="Confirmer le mot de passe" name="confirmed" required/>
                         </div>
                         <div class="col-12">
                             <ul class="actions">
@@ -123,3 +126,6 @@
 
 </body>
 </html>
+
+
+
