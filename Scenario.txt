@@ -23,3 +23,5 @@ Création d'évènement :
 	- Moyens de transport : Train
 	- Amis : hedi.guedidi@dauphine.eu, amira.lakhdhar@dauphine.eu
 	- Heure : 8h
+
+Hedi et Amira ne sont pas inscrits à l'application Let's plan.
