@@ -1,0 +1,25 @@
+Mail Let's plan : lets-plan@outlook.com
+Mot de passe : ****
+
+Création de compte :
+	- Nom : Santangelo
+	- Prénom : Mike
+	- Email : mike.santangelo@dauphine.eu
+	- Mot de passe : 123
+	- Confirmation de mot de passe : 123
+
+
+Connexion :
+	- Email : mike.santangelo@dauphine.eu
+	- Mot de passe : 123
+
+Création d'évènement :
+	- Jour souhaité : 04/05/2021
+	- Titre : Visite du Louvre
+	- Type : Musée
+	- Description : Une expo exceptionnelle à ne pas rater!
+	- Lieu : Rue de Rivoli, 75001 Paris
+	- Durée (en minutes) OBLIGATOIRE : 180min
+	- Moyens de transport : Train
+	- Amis : hedi.guedidi@dauphine.eu, amira.lakhdhar@dauphine.eu
+	- Heure : 8h
