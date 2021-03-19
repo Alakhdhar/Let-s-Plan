@@ -19,7 +19,7 @@ Création d'évènement :
 	- Type : Musée
 	- Description : Une expo exceptionnelle à ne pas rater!
 	- Lieu : Rue de Rivoli, 75001 Paris
-	- Durée (en minutes) OBLIGATOIRE : 180min
+	- Durée (en minutes) OBLIGATOIRE : 180
 	- Moyens de transport : Train
 	- Amis : hedi.guedidi@dauphine.eu, amira.lakhdhar@dauphine.eu
 	- Heure : 8h
