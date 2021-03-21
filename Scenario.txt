@@ -32,6 +32,7 @@ Modifier l'évènement :
     - Durée (en minutes) OBLIGATOIRE : 100
     - Heure : 10h
 
- Annuler l'evenement
+ Annuler l'evenement:
+    - cliquer sur le bouton annuler
 
 
