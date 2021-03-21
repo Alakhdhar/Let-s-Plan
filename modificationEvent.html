@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Création d'évènement</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		$(function() {
+			$( "#datepicker" ).datepicker({
+				altField: "#datepicker",
+				closeText: 'Fermer',
+				prevText: 'Précédent',
+				nextText: 'Suivant',
+				currentText: 'Aujourd\'hui',
+				monthNames: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+				monthNamesShort: ['Janv.', 'Févr.', 'Mars', 'Avril', 'Mai', 'Juin', 'Juil.', 'Août', 'Sept.', 'Oct.', 'Nov.', 'Déc.'],
+				dayNames: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+				dayNamesShort: ['Dim.', 'Lun.', 'Mar.', 'Mer.', 'Jeu.', 'Ven.', 'Sam.'],
+				dayNamesMin: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
+				weekHeader: 'Sem.',
+				dateFormat: 'dd/mm/yy'
+			});
+		});
+
+		function generateChoices() {
+			var duration = parseInt(document.getElementById("duration").value, 10);
+			$( "#choices" ).empty();
+			if (!isNaN(duration) && duration != 0) {
+				var borne1 = 480;
+				var borne2 = 1080;
+				var j = 0;
+				var str = '';
+				var firstTime = true;
+				for (let i = borne1; i + duration < borne2; i += 5) {
+					if (firstTime || Math.random() < 0.05) {
+						var hours = Math.floor(i / 60);       
+						var minutes = i % 60;
+						str = hours + "h" + (minutes != 0 ? minutes : '');
+						firstTime = false;
+						$( "#choices" ).append( "<div class='col-4 col-12-small'><input type='radio' id='choice" + j + "' name='choice'><label for='choice" + (j++) + "'>" + str + "</label></div>");
+					}
+				}
+				document.getElementById("submit").className = "button primary";
+			}
+		}
+	</script>
+	<script>
+		$( function() {
+			var availableTags = [
+			"elhelwsarah@gmail.com",
+			"hedi.guedidi@dauphine.eu",
+			"amira.lakhdhar@dauphine.eu"
+			];
+			function split( val ) {
+				return val.split( /,\s*/ );
+			}
+			function extractLast( term ) {
+				return split( term ).pop();
+			}
+
+			$( "#friends" )
+      // don't navigate away from the field on tab when selecting an item
+      .on( "keydown", function( event ) {
+      	if ( event.keyCode === $.ui.keyCode.TAB &&
+      		$( this ).autocomplete( "instance" ).menu.active ) {
+      		event.preventDefault();
+      }
+  })
+      .autocomplete({
+      	minLength: 0,
+      	source: function( request, response ) {
+          // delegate back to autocomplete, but extract the last term
+          response( $.ui.autocomplete.filter(
+          	availableTags, extractLast( request.term ) ) );
+      },
+      focus: function() {
+          // prevent value inserted on focus
+          return false;
+      },
+      select: function( event, ui ) {
+      	var terms = split( this.value );
+          // remove the current input
+          terms.pop();
+          // add the selected item
+          terms.push( ui.item.value );
+          // add placeholder to get the comma-and-space at the end
+          terms.push( "" );
+          this.value = terms.join( ", " );
+          return false;
+      }
+  });
+  } );
+</script>
+</head>
+<body class="is-preload">
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="login.php">Let's Plan</a></h1>
+			<nav id="nav">
+				<ul>
+					<li class="special">
+						<a href="#menu" class="menuToggle"><span>Menu</span></a>
+						<div id="menu">
+							<ul>
+								<li><a href="events.html">Evènements</a></li>
+								<li><a href="events.html">Notifications 0</a></li>
+								<li><a href="events.html">Rappels 0</a></li>
+								<li><a href="createEvent.html">Créer évènement</a></li>
+								<li><a href="login.php">Déconnexion</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<article id="main">
+			<header>
+				<h2>Créer un évènement</h2>
+			</header>
+			<section class="wrapper style5">
+				<div class="inner">
+
+					<h4>Renseignez les informations de l'évènement</h4>
+					<form method="post" action="#">
+						<div class="row gtr-uniform">
+							<div class="col-6 col-12-xsmall">
+								<input type="text" name="date" id="datepicker" placeholder="Jour souhaité" value="04/05/2021">
+							</div>
+							<div class="col-6 col-12-xsmall">
+								<input type="text" name="title" id="title" value="Visite du Louvre" placeholder="Titre" value="Visite du Louvre" />
+							</div>
+							<div class="col-12">
+								<select name="type" id="Type">
+									<option value="aucun"> -- Saisissez le type de votre évènement -- </option>
+									<option value="After-work"> After-work </option>
+									<option value="Anniversaire"> Anniversaire </option>
+									<option value="Balade"> Balade </option>
+									<option value="Boîte de nuit"> Boîte de nuit </option>
+									<option value="Cinéma"> Cinéma </option>
+									<option value="Concert"> Concert </option>
+									<option value="Conférence"> Conférence </option>
+									<option value="Exposition"> Exposition </option>
+									<option value="Festival"> Festival </option>
+									<option value="Fête"> Fête </option>
+									<option value="Musée" selected="selected"> Musée </option>
+									<option value="Opéra"> Opéra </option>
+									<option value="Parc"> Parc </option>
+									<option value="Parc d’attraction"> Parc d’attraction </option>
+									<option value="Pêche"> Pêche </option>
+									<option value="Porte ouverte"> Porte ouverte </option>
+									<option value="Pot de départ"> Pot de départ </option>
+									<option value="Randonnée"> Randonnée </option>
+									<option value="Restaurant"> Restaurant </option>
+									<option value="Spectacle"> Spectacle </option>
+									<option value="Théâtre"> Théâtre </option>
+									<option value="Voyage"> Voyage </option>
+									<option value="Zoo"> Zoo </option>
+								</select>
+							</div>
+							
+							<div class="col-12">
+								<textarea name="description" id="description" placeholder="Description" rows="6">Une expo exceptionnelle à ne pas rater!</textarea>
+							</div>
+							
+							<div class="col-6 col-12-xsmall">
+								<input type="text" name="place" id="place" placeholder="Lieu" value="Rue de Rivoli, 75001 Paris"/>
+							</div>
+							<div class="col-6 col-12-xsmall">
+								<input type="text" name="duration" id="duration" placeholder="Durée (en minutes) OBLIGATOIRE" value="180" />
+							</div>
+
+							<div class="col-3 col-12-small">
+								<input type="checkbox" id="aPied" name="onFoot">
+								<label for="aPied">A pied</label>
+							</div>
+							<div class="col-3 col-12-small">
+								<input type="checkbox" id="avion" name="plane">
+								<label for="avion">Avion</label>
+							</div>
+							<div class="col-3 col-12-small">
+								<input type="checkbox" id="bateau" name="boat">
+								<label for="bateau">Bateau</label>
+							</div>
+							<div class="col-3 col-12-small">
+								<input type="checkbox" id="bus" name="bus">
+								<label for="bus">Bus</label>
+							</div>
+
+							<div class="col-3 col-12-small">
+								<input type="checkbox" id="taxi" name="taxi">
+								<label for="taxi">Taxi</label>
+							</div>
+							<div class="col-3 col-12-small">
+								<input type="checkbox" id="train" name="train" checked>
+								<label for="train">Train</label>
+							</div>
+							<div class="col-3 col-12-small">
+								<input type="checkbox" id="velo" name="bike">
+								<label for="velo">Vélo</label>
+							</div>
+							<div class="col-3 col-12-small">
+								<input type="checkbox" id="voiture" name="car">
+								<label for="voiture">Voiture</label>
+							</div>
+							<div class="col-6 col-12-small">
+								<input type="text" id="friends" name="friends" placeholder="Amis (attendre l'autocomplétion)" value="hedi.guedidi@dauphine.eu, amira.lakhdhar@dauphine.eu">
+							</div>
+							<div id="choices"></div>
+							<div class="col-12">
+								<ul class="actions">
+									<li><a id="submit" href="events3.html" class="button primary disabled">Soumettre</a></li>
+									<li><a id="generate" onClick="generateChoices()" class="button">Trouver les horaires</a></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+		</article>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>

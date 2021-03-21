@@ -25,3 +25,13 @@ Création d'évènement :
 	- Heure : 8h
 
 Hedi et Amira ne sont pas inscrits à l'application Let's plan.
+
+Aller dans le menu évènement
+
+Modifier l'évènement :
+    - Durée (en minutes) OBLIGATOIRE : 100
+    - Heure : 10h
+
+ Annuler l'evenement
+
+
