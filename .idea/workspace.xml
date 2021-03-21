@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="97387786-3862-48f7-8416-2f8757ba573a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Retrieve_Events.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_createEvent.php" beforeDir="false" afterPath="$PROJECT_DIR$/DB_createEvent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_signIn.php" beforeDir="false" afterPath="$PROJECT_DIR$/DB_signIn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_signUp.php" beforeDir="false" afterPath="$PROJECT_DIR$/DB_signUp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code.sql" beforeDir="false" afterPath="$PROJECT_DIR$/code.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/createEvent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1pLPnYQKSu8axyVtxWr7T9IacIq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.reader.mode" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="97387786-3862-48f7-8416-2f8757ba573a" name="Default Changelist" comment="" />
+      <created>1614959567532</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614959567532</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

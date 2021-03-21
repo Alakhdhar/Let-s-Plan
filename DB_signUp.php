@@ -1,6 +1,8 @@
 <?php
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
   //connexion au serveur:
-  $connexion= new PDO('mysql:host=localhost;dbname=planning;charset=utf8', 'root', 'root');
+  $connexion= new PDO('mysql:host=localhost:3307;dbname=planning;charset=utf8', 'root', 'root');
 
   if (!$connexion) {
       echo "Pas de connexion au serveur " ;
@@ -22,7 +24,7 @@
               $res_pseudo->closeCursor();
           } else {
               $res_pseudo->closeCursor();
-              $count = mysqli_num_rows($res_pseudo);
+              $count = $res_pseudo -> fetchColumn();
               if ($count==0){
                   $resultat= $connexion->exec("INSERT INTO utilisateurs (nom,prenom,email,mdp) VALUES('$lastname','$firstname','$email','$password')" ) or die(print_r($connexion->errorInfo()));
                   if(!$resultat){
@@ -39,5 +41,5 @@
           echo "Vous devez tout remplir";
       }
   }
-     $connexion->closeCursor();
+     $connexion = null;
   ?>

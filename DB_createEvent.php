@@ -1,10 +1,14 @@
 <?php 
+	error_reporting(E_ALL);
+	ini_set('display_errors', 'On');
+	ini_set('display_startup_errors', 1);
+
   session_start();
 
-  $connexion= new PDO('mysql:host=localhost;dbname=planning;charset=utf8', 'root', 'root');
+	$connexion= new PDO('mysql:host=localhost:3307;dbname=planning;charset=utf8', 'root', 'root');
 
   if (!$connexion) {
-      echo "Pas de connexion au serveur." ;
+      echo "Pas de connexion au serveur " ;
       exit ;
   }
   echo "Connexion reussie! " ;
@@ -21,7 +25,7 @@
           
           $transportationMean ="";
           if (isset($_POST['onFoot'])){
-              $transportationMean+=";� Pied";
+              $transportationMean+=";à Pied";
           }
           if (isset($_POST['plane'])){
               $transportationMean+=";avion";
@@ -50,7 +54,6 @@
           echo "Vous devez remplir les champs : date, titre, type, lieu et duree.";
       }
   }
-  
   // Insert in evenements :
   $connexion->exec("INSERT INTO evenements (titre, description, Type, Date, duree, lieu, moyenDeTransport, amis) VALUES('$title', '$description', '$type', '$date', '$duration', '$place', ' $transportationMean', '$friends')" ) or die(print_r($connexion->errorInfo()));
   
@@ -64,7 +67,7 @@
   $result->closeCursor();
   
   $friendsArray = explode(", ", $friends, 3);
-  foreach($friendsArray as $friend){
+  /*foreach($friendsArray as $friend){
       $result= $connexion->query("SELECT * FROM utilisateurs WHERE utilisateurs.email='{$friend}") or die(print_r($connexion->errorInfo()));
       if(!$result){
           echo "Requete incorrecte. \n ";
@@ -75,10 +78,10 @@
       
       $connexion->exec("INSERT INTO invitations (idEvenement, idUtilisateur) VALUES('$eventId','$friendId')" ) or die(print_r($connexion->errorInfo()));
       
-  }
+  }*/
+  echo "enregistrement d evenement réussi";
+  /*$connexion = null;*/
   
-  $connexion->closeCursor();
-  
-  header('Location:eventSubmitted.html');
+
   
   ?>

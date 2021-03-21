@@ -1,5 +1,7 @@
 <?php
-$connexion = new PDO('mysql:host=localhost;dbname=planning;charset=utf8', 'root', 'root');
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+$connexion = new PDO('mysql:host=localhost:3307;dbname=planning;charset=utf8', 'root', 'root');
 
 if (! $connexion) {
     echo "Pas de connexion au serveur ";
@@ -13,22 +15,25 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     if (! $resultat) {
         echo "Requete incorrecte \n ";
     }
-    $data = PDO::FETCH_ASSOC($resultat);
+    $data = $resultat->fetch(PDO::FETCH_ASSOC);
     if ($resultat->rowCount() > 0) {
-        if (password_verify($_POST["password"], $data["mdp"])) {
+    echo $data["mdp"];
+    echo $_POST["password"];
+        if (strcmp($_POST["password"],$data["mdp"]) ==0) {
             $co = $data['id'];
             $pr = $data['prenom'];
             $n = $data['nom'];
             $m = $data['mdp'];
+            session_start();
             $_SESSION['id'] = $co;
             $_SESSION['prenom'] = $pr;
             $_SESSION['nom'] = $n;
             $_SESSION['mdp'] = $m;
-            header('Location:events.html');
+            header('Location:createEvent.html');
         } else {
             echo "Error 1";
         }
     }
 }
-$connexion->closeCursor();
+$connexion = null;
 ?>

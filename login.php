@@ -48,7 +48,7 @@
                     <a href="http://localhost/Let-s-Plan/events.html">Se connecter via Facebook</a>
                 </p>
                 <section>
-                    <form method="post" action="events.html">
+                    <form method="post" action="DB_signIn.php">
                         <div class="row gtr-uniform">
                             <div class="col-6 col-12-xsmall">
                                 <input type="email" name="email" id="username" value="" placeholder="Email" required/>
@@ -68,7 +68,7 @@
 
                 <hr />
                 <h2>Vous n'avez pas encore un compte chez nous ? Rejoignez-nous ! </h2>
-                <form method="post" action="login.php">
+                <form method="post" action="DB_signUp.php">
                     <div class="row gtr-uniform">
                         <div class="col-6 col-12-xsmall">
                             <input type="text" name="demo-name" id="demo-name" value="" placeholder="Nom" />

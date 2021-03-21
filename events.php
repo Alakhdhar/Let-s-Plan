@@ -1,3 +1,9 @@
+<?php
+
+ini_set("display_errors", 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+require('config.php');?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -14,7 +20,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="login.php">Let's Plan</a></h1>
+						<h1><a href="login.php">Let s Plan</a></h1>
 						<nav id="nav">
 							<ul>
 								<li class="special">
@@ -41,18 +47,19 @@
 						<section class="wrapper style5">
 							<div class="inner">
 								<table>
-									<tr>
-										<td>Event1</td>
-									</tr>
-									<tr>
-										<td>Event2</td>
-									</tr>
-									<tr>
-										<td>Event3</td>
-									</tr>
+                                        <?php
+                                        include('Retrieve_Events.php');
 
-
-
+                                        foreach ($events as $event) {
+                                            echo '<tr>';
+                                            echo '<td>' . $event['titre'] . '</td>';
+                                            echo '<td>' . $event['Type'] . '</td>';
+                                            echo '<td>' . $event['Date'] . '</td>';
+                                            echo '<td>' . $event['duree'] . '</td>';
+                                            echo '<td>' . $event['lieu'] . '</td>';
+                                            echo '</tr>';
+                                        }
+                                        ?>
 								</table>
 
 
