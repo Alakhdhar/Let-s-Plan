@@ -44,8 +44,8 @@
             <div class="inner">
                 <h2>Connexion</h2>
                 <p>
-                    <a href="https://accounts.google.com/o/oauth2/v2/auth?scope=email&access_type=online&response_type=code&redirect_uri=<?= urlencode('http://localhost/Let-s-Plan/testMike/events.html') ?>&client_id=<?= GOOGLE_ID ?>">Se connecter via Google</a>
-                    <a href="http://localhost/Let-s-Plan/testMike/events.html">Se connecter via Facebook</a>
+                    <a href="https://accounts.google.com/o/oauth2/v2/auth?scope=email&access_type=online&response_type=code&redirect_uri=<?= urlencode('http://localhost/Let-s-Plan/events.html') ?>&client_id=<?= GOOGLE_ID ?>">Se connecter via Google</a>
+                    <a href="http://localhost/Let-s-Plan/events.html">Se connecter via Facebook</a>
                 </p>
                 <section>
                     <form method="post" action="events.html">
@@ -80,7 +80,10 @@
                             <input type="email" name="email" id="email" value="" placeholder="Email" required/>
                         </div>
                         <div class="col-6 col-12-xsmall">
-                            <input type="password" name="password" id="password" value="" placeholder="Mot de passe" required/>
+                            <input type="password" name="password" id="password" value="<?php if(isset($password)){ echo $password; }?>" placeholder="Mot de passe" required/>
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            <input type="password" id="password" value="" placeholder="Confirmer le mot de passe" name="confirmed" required/>
                         </div>
                         <div class="col-12">
                             <ul class="actions">

@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Mon compte</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .button1 {background-color: #FFDC00;}
+        .button2 {background-color: #FF4136;}
+        .form-div { margin-top: 100px; border: 1px solid #e0e0e0; }
+        #profileDisplay { display: block; height: 200px; width: 50%; margin: 0px auto; border-radius: 50%; }
+        .img-placeholder {
+            width: 50%;
+            color: white;
+            height: 100%;
+            background: black;
+            opacity: .7;
+            height: 200px;
+            border-radius: 50%;
+            z-index: 2;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+        }
+        .img-placeholder h4 {
+            margin-top: 40%;
+            color: white;
+        }
+        .img-div:hover .img-placeholder {
+            display: block;
+            cursor: pointer;
+        }
+        textee{
+            border: 0;
+            display: block;
+            height: inherit;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 800;
+            letter-spacing: 0.225em;
+            line-height: 1em;
+            margin: 0 0 1em 0;
+            text-transform: uppercase;
+        }
+        .modif{
+            max-width: 10%;
+        }
+    </style >
+</head>
+<body class="is-preload">
+
+<!-- Page Wrapper -->
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <h1><a href="login.php" style="font-size:16px;color: #fff;font-weight: 800;letter-spacing: 0.225em;line-height: 3em;margin: 0 0 0em;text-transform: uppercase;" >Let's Plan</a></h1>
+        <nav id="nav">
+            <ul>
+                <li class="special">
+                    <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                    <div id="menu">
+                        <ul>
+                            <li><a href="events.html">Evènements</a></li>
+                            <li><a href="events.html">Notifications 0</a></li>
+                            <li><a href="events.html">Rappels 0</a></li>
+                            <li><a href="createEvent.html">Créer évènement</a></li>
+                            <li><a href="modificationCompte.html">Mon compte</a></li>
+                            <li><a href="login.php">Déconnexion</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <article id="main">
+        <header>
+            <h2 style="color: white;">Modifier votre compte</h2>
+        </header>
+        <section class="wrapper style5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 offset-md-4 form-div">
+                        <form action="avatar1.html" method="post" enctype="multipart/form-data">
+                            <h2 class="text-center mb-3 mt-3">Mon profile</h2>
+                            <?php if (!empty($msg)): ?>
+                            <div class="alert <?php echo $msg_class ?>" role="alert">
+                                <?php echo $msg; ?>
+                            </div>
+                            <?php endif; ?>
+                            <div class="form-group text-center" style="position: relative;" >
+                            <span class="img-div">
+                              <div class="text-center img-placeholder"  onClick="triggerClick()">
+                                <h4>Changer</h4>
+                              </div>
+                              <img src="images/Amira.jpg" onClick="triggerClick()" id="profileDisplay">
+                            </span>
+                                <input type="file" name="profileImage" onChange="displayImage(this)" id="profileImage" class="form-control" style="display: none;">
+                                <label>Photo de profil </label>
+                            </div>
+                            <div class="form-group">
+                                <label>Mes informations :</label>
+                                <img style="max-width: 10%;" src="images/modifier.png" onClick="imageClick('modifInfos.html')">
+                                <p>
+                                    Nom : Lakhdhar <br>
+                                    Prénom : Amira <br>
+                                    Email : amiralakdhar@gmail.com
+                                </p>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block">Mettre à jour</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+
+</div>
+<!-- Scripts -->
+<script>
+    function triggerClick(e) {
+        document.querySelector('#profileImage').click();
+    }
+    function displayImage(e) {
+        if (e.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e){
+                document.querySelector('#profileDisplay').setAttribute('src', e.target.result);
+            }
+            reader.readAsDataURL(e.files[0]);
+        }
+    }
+    function imageClick(url) {
+        window.location = url;
+    }
+</script>
+
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
