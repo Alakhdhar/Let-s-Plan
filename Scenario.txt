@@ -1,7 +1,7 @@
 Mail Let's plan : lets-plan@outlook.com
 Mot de passe : ****
 
-Création de compte :
+1) Création de compte :
 	- Nom : Santangelo
 	- Prénom : Mike
 	- Email : mike.santangelo@dauphine.eu
@@ -9,11 +9,11 @@ Création de compte :
 	- Confirmation de mot de passe : 123
 
 
-Connexion :
+2) Connexion :
 	- Email : mike.santangelo@dauphine.eu
 	- Mot de passe : 123
 
-Création d'évènement :
+3) Création d'évènement :
 	- Jour souhaité : 04/05/2021
 	- Titre : Visite du Louvre
 	- Type : Musée
@@ -23,16 +23,15 @@ Création d'évènement :
 	- Moyens de transport : Train
 	- Amis : hedi.guedidi@dauphine.eu, amira.lakhdhar@dauphine.eu
 	- Heure : 8h
-
 Hedi et Amira ne sont pas inscrits à l'application Let's plan.
 
-Aller dans le menu évènement
+4) Aller dans le menu évènement
 
-Modifier l'évènement :
+5) Modifier l'évènement :
     - Durée (en minutes) OBLIGATOIRE : 100
     - Heure : 10h
 
- Annuler l'evenement:
+6) Annuler l'evenement:
     - cliquer sur le bouton annuler
 
 
