@@ -25,13 +25,19 @@ Mot de passe : ****
 	- Heure : 8h
 Hedi et Amira ne sont pas inscrits à l'application Let's plan.
 
+############## Envoi e-mails récapitulatif à Hedi et Amira ##############
+
+############## Envoi e-mails rappel à Hedi et Amira ##############
+
 4) Aller dans le menu évènement
 
-5) Modifier l'évènement :
+5) Visualiser l'adresse sur Google Maps
+
+6) Modifier l'évènement :
     - Durée (en minutes) OBLIGATOIRE : 100
     - Heure : 10h
 
-6) Annuler l'evenement:
+7) Annuler l'evenement:
     - cliquer sur le bouton annuler
 
 
