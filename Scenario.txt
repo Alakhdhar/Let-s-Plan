@@ -29,7 +29,7 @@ Hedi et Amira ne sont pas inscrits à l'application Let's plan.
 
 ############## Envoi e-mails rappel à Hedi et Amira ##############
 
-4) Aller dans le menu évènement
+4) Constater Notifications et Rappels à 1. Aller dans le menu évènement
 
 5) Visualiser l'adresse sur Google Maps
 
