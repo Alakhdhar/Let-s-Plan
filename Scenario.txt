@@ -44,4 +44,6 @@ Hedi et Amira ne sont pas inscrits à l'application Let's plan.
 
 ############## Envoi e-mails annulation à Mike, Hedi et Amira ##############
 
+8) Aller dans "Mon Compte" et modifier la photo de profil en "Avatar2" puis Mettre à jour.
+
 
