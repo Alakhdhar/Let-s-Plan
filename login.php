@@ -15,7 +15,7 @@
 
     <!-- Header -->
     <header id="header" class="alt">
-        <h1><a href="login.php">Let's Plan</a></h1>
+        <img style="height: 100%; width: 100%; object-fit: contain" src="images/logo.png"/>
         <nav id="nav">
             <ul>
                 <li class="special">
