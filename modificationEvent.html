@@ -31,20 +31,9 @@
 			var duration = parseInt(document.getElementById("duration").value, 10);
 			$( "#choices" ).empty();
 			if (!isNaN(duration) && duration != 0) {
-				var borne1 = 480;
-				var borne2 = 1080;
-				var j = 0;
-				var str = '';
-				var firstTime = true;
-				for (let i = borne1; i + duration < borne2; i += 5) {
-					if (firstTime || Math.random() < 0.05) {
-						var hours = Math.floor(i / 60);       
-						var minutes = i % 60;
-						str = hours + "h" + (minutes != 0 ? minutes : '');
-						firstTime = false;
-						$( "#choices" ).append( "<div class='col-4 col-12-small'><input type='radio' id='choice" + j + "' name='choice'><label for='choice" + (j++) + "'>" + str + "</label></div>");
-					}
-				}
+				$( "#choices" ).append("<div class='col-4 col-12-small'><input type='radio' id='choice1' name='choice' checked><label for='choice1'>8h</label></div>");
+				$( "#choices" ).append("<div class='col-4 col-12-small'><input type='radio' id='choice2' name='choice'><label for='choice2'>10h</label></div>");
+				$( "#choices" ).append("<div class='col-4 col-12-small'><input type='radio' id='choice3' name='choice'><label for='choice3'>14h</label></div>");
 				document.getElementById("submit").className = "button primary";
 			}
 		}
