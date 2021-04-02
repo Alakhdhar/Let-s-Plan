@@ -1,94 +1,96 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Liste des évènements</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<head>
+	<title>Liste des évènements</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-		<style>
-	.button1 {background-color: #FFDC00;}
-	.button2 {background-color: #FF4136;}
+	<style>
+		.button1 {background-color: #FFDC00;}
+		.button2 {background-color: #FF4136;}
 	</style>
 
-	</head>
-	<body class="is-preload">
+</head>
+<body class="is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<img style="height: 100%; width: 100%; object-fit: contain" src="images/logo.png"/>
-						<nav id="nav">
+		<!-- Header -->
+		<header id="header">
+			<img style="height: 100%; width: 100%; object-fit: contain" src="images/logo.png"/>
+			<nav id="nav">
+				<ul>
+					<li class="special">
+						<a href="#menu" class="menuToggle"><span>Menu</span></a>
+						<div id="menu">
 							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="events.html">Evènements</a></li>
-											<li><a href="events.html">Notifications 1</a></li>
-											<li><a href="events.html">Rappels 1</a></li>
-											<li><a href="createEvent.html">Créer évènement</a></li>
-											<li><a href="modificationCompte.html">Mon compte</a></li>
-											<li><a href="login.php">Déconnexion</a></li>
-										</ul>
-									</div>
-								</li>
+								<li><a href="events.html">Evènements</a></li>
+								<li><a href="events.html">Notifications 1</a></li>
+								<li><a href="events.html">Rappels 1</a></li>
+								<li><a href="createEvent.html">Créer évènement</a></li>
+								<li><a href="modificationCompte.html">Mon compte</a></li>
+								<li><a href="login.php">Déconnexion</a></li>
 							</ul>
-						</nav>
-					</header>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
 
-				<!-- Main -->
-					<article id="main">
-						<header>
-							<h2>Evènements</h2>
-						</header>
-						<section class="wrapper style5">
-							<div class="inner">
+		<!-- Main -->
+		<article id="main">
+			<header>
+				<h2>Evènements</h2>
+			</header>
+			<section class="wrapper style5">
+				<div class="inner">
+					<div class="table-wrapper">
+						<table class="alt">
+							<thead>
+								<tr>
+									<th>Titre</th>
+									<th>Jour</th>
+									<th>Heure</th>
+									<th>Durée</th>
+									<th>Type</th>
+									<th>Lieu</th>
+									<th>Organisateur</th>
+									<th>Modification</th>
+									<th>Annulation</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr background="images/museum.jpg">
+									<td>Visite du Louvre</td>
+									<td>04/05/2021</td>
+									<td>10h</td>
+									<td>100 mins</td>
+									<td>Musée</td>
+									<td><a href="https://www.google.fr/maps/place/Rue+de+Rivoli,+75001+Paris/">Rue de Rivoli, 75001 Paris</a></td>
+									<td>Oui</td>
+									<td><button type="button"  class="button1" onclick="window.location.href = 'modificationEvent.html';">Modifier</button></td>
+									<td><button type="button"  class="button2" onclick="window.location.href = 'events.html';">Annuler</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+		</article>
 
-								<table>
-									<tr>
-										<th>Titre</th>
-										<th>Jour</th>
-										<th>Heure</th>
-										<th>Durée</th>
-										<th>Type</th>
-										<th>Lieu</th>
-										<th>Organisateur</th>
-										<th>Modification</th>
-										<th>Annulation</th>
+	</div>
 
-									</tr>
-									<tr>
-										<td>Visite du Louvre</td>
-										<td>04/05/2021</td>
-										<td>10h</td>
-										<td>100 mins</td>
-										<td>Musée</td>
-										<td><a href="https://www.google.fr/maps/place/Rue+de+Rivoli,+75001+Paris/">Rue de Rivoli, 75001 Paris</a></td>
-										<td>Oui</td>
-										<td><button type="button"  class="button1">Modifier</button></td>
-										<td><button type="button"  class="button2" onclick="window.location.href = 'events.html';">Annuler</button></td>
-									</tr>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
-								</table>
-
-							</div>
-						</section>
-					</article>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
