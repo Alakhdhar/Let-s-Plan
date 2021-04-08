@@ -31,7 +31,7 @@ Hedi et Amira ne sont pas inscrits à l'application Let's plan.
 
 4) Constater Notifications et Rappels à 1. Aller dans le menu évènement
 
-5) Visualiser l'adresse sur Google Maps
+5) Visualiser l'itinéraire + les lieux de détente sur Google Maps
 
 6) Modifier l'évènement :
     - Durée (en minutes) OBLIGATOIRE : 100
