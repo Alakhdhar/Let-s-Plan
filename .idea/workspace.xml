@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="702d18cc-7d28-436f-90b2-4f0815e58ea7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Restaurants.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/avatar1.html" beforeDir="false" afterPath="$PROJECT_DIR$/avatar1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/createEvent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eventSubmitted.html" beforeDir="false" afterPath="$PROJECT_DIR$/eventSubmitted.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events2.html" beforeDir="false" afterPath="$PROJECT_DIR$/events2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events3.html" beforeDir="false" afterPath="$PROJECT_DIR$/events3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modifInfos.html" beforeDir="false" afterPath="$PROJECT_DIR$/modifInfos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modificationCompte.html" beforeDir="false" afterPath="$PROJECT_DIR$/modificationCompte.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modificationEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/modificationEvent.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1q4RnbKiSuuj55SEcYCipF7qMM9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\Let-s-Plan" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="702d18cc-7d28-436f-90b2-4f0815e58ea7" name="Default Changelist" comment="" />
+      <created>1616337046327</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616337046327</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
