@@ -50,3 +50,5 @@ Hedi et Amira ne sont pas inscrits à l'application Let's plan.
 
 10) Aller dans "Mon Compte" et modifier la photo de profil en "Avatar2" puis Mettre à jour.
 
+11) Aller dans nos restaurants partenaires et montrer les partenaires
+
