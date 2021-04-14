@@ -39,16 +39,16 @@ Hedi et Amira ne sont pas inscrits à l'application Let's plan.
 
 ############## Envoi e-mails modification à Mike, Hedi et Amira ##############
 
-7) Montrer la bulle de communication avec Amira sur la page des évènements
+7) Montrer la bulle de communication avec Amira sur la page des évènements. Montrer qu'on peut envoyer des smileys.
 
-8) Cliquer sur Conversation sur l'évènement pour montrer le groupe Hangouts
+8) Cliquer sur Conversation sur l'évènement pour montrer le groupe Hangouts. On peut échanger des photos dessus avec le groupe de l'évènement
 
 9) Annuler l'evenement:
     - cliquer sur le bouton annuler
 
 ############## Envoi e-mails annulation à Mike, Hedi et Amira ##############
 
-10) Aller dans "Mon Compte" et modifier la photo de profil en "Avatar2" puis Mettre à jour.
+10) Aller dans "Mon Compte" et modifier la photo de profil en "Avatar2" puis Mettre à jour. Signaler qu'une fenêtre s'ouvre. Montrer qu'on peut modifier les infos.
 
 11) Aller dans nos restaurants partenaires et montrer les partenaires
 
